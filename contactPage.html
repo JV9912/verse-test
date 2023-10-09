@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <title>Contact Us</title>
     <link rel="stylesheet" href="contactStyle.css">
-    <link rel="stylesheet" href="transitionStyle.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
-    <script src="contactPage.js"></script>
+    <script src="stars.js"></script>
     <script>
         window.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".fade-in").classList.add("active");
@@ -19,21 +18,22 @@
 </head>
 
 <body>
+    <div class="nebula"></div>
     <div class="header">
         <div class="navbar">
             <div class="logo">
-                <img src="images/logo-white-teal.png" width="125px">
+                <a href="index.html">
+                    <img src="images/saturn-blue-marble.png" width="125px">
+                </a>                
             </div>
             <nav>
                 <ul>
                     <li><button><a href="index.html">Home</a></button></li>
                     <li><button><a href="gallery.html">Gallery</a></button></li>
-                    <li><button><a href="contactPage.html">Contact</a></button></li>
                     <li><button><a href="">About</a></button></li>
-                    <li><button><a href="https://www.instagram.com/verseoutfitters/"><img src="images/ig_logo.png"
-                                    width="23px"></a></button></li>
-                    <li><button><a href=""><img src="images/x_logo.png" width="23px"></a></button></li>
-                    <li><button><a href=""><img src="images/tt_logo.png" width="23px"></a></button></li>
+                    <li><button><a href="contactPage.html">Contact</a></button></li>
+                    <li><button><a href="https://www.instagram.com/verseoutfitters/"><img src="images/pngtree-instagram-icon-instagram-logo-png-image_3584853.png" width="25px"></a></button></li>
+                    <li><button><a href=""><img src="images/tiktoklogo.png" width="20px"></a></button></li>
                     <li><button><a href="">Connect</a></button></li>
                 </ul>
             </nav>
@@ -41,7 +41,7 @@
     </div>
     <div class="col-3">
         <div class="container1">
-            <h2 class="teal-heading">Contact Us</h2>
+            <h2 class="text-white">Contact Us</h2>
             <form class="contact-form" onsubmit="return validateForm()">
                 <input type="text" id="name" name="name" placeholder="Your name" required>
                 <input type="email" id="email" name="email" placeholder="Your email" required>
@@ -50,6 +50,7 @@
             </form>
         </div>
     </div>
+    <script src="homePagescript.js"></script>
 </body>
 
 </html>
