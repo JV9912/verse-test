@@ -108,10 +108,10 @@ nav button a {
     color: #808080;
     animation: background-pan 10s linear infinite;
     background: linear-gradient(to right,
-            #000000,
-            #010f23,
-            #02234d,
-            #000000);
+          #100A1C,
+          #2904ac9d,
+          #0A2341,
+          #100A1C);
     background-size: 200%;
 
     white-space: nowrap;
