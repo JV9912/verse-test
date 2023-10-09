@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="transitionStyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    <script src="contactPage.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".fade-in").classList.add("active");
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo-white-teal.png" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li><button><a href="index.html">Home</a></button></li>
+                    <li><button><a href="gallery.html">Gallery</a></button></li>
+                    <li><button><a href="contactPage.html">Contact</a></button></li>
+                    <li><button><a href="">About</a></button></li>
+                    <li><button><a href="https://www.instagram.com/verseoutfitters/"><img src="images/ig_logo.png"
+                                    width="23px"></a></button></li>
+                    <li><button><a href=""><img src="images/x_logo.png" width="23px"></a></button></li>
+                    <li><button><a href=""><img src="images/tt_logo.png" width="23px"></a></button></li>
+                    <li><button><a href="">Connect</a></button></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="container1">
+            <h2 class="teal-heading">Contact Us</h2>
+            <form class="contact-form" onsubmit="return validateForm()">
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+                <textarea id="message" name="message" placeholder="What can we help you with?" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

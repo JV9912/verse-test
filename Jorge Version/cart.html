@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Verse | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    <style>
+        /* Container styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            /* Center the content in table cells */
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Quantity buttons */
+        .quantity-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Remove button */
+        .remove-button img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        /* Clear cart button */
+        #clear-cart-button {
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 3px;
+        }
+
+        /* Total price */
+        p {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* Back to Shopping link */
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Your Shopping Cart</h1>
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </tbody>
+        </table>
+        <p>Total Price: <span id="cart-total">$0.00</span></p>
+        <button id="clear-cart-button" onclick="clearCart()">Clear Cart</button>
+        <a href="collections.html">Back to Shopping</a>
+    </div>
+
+    <script>
+        // Function to display cart contents
+        function displayCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            // Retrieve cart data from localStorage
+            const cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+            cartData.forEach(item => {
+                const row = document.createElement('tr');
+                const productName = item.name; // Use the product name from cartData
+                const productPrice = `$${item.price.toFixed(2)}`; // Use the product price from cartData
+                const productQuantity = item.quantity;
+                const productTotal = (item.price * item.quantity).toFixed(2); // Calculate total price
+
+                total += parseFloat(productTotal);
+
+                row.innerHTML = `
+                    <td>${productName}</td>
+                    <td>${productPrice}</td>
+                    <td class="quantity-buttons">
+                        <button onclick="decreaseQuantity(${item.id})">-</button>
+                        <span>${productQuantity}</span>
+                        <button onclick="increaseQuantity(${item.id})">+</button>
+                    </td>
+                    <td>$${productTotal}</td>
+                    <td class="remove-button">
+                        <img src="images/trash.png" onclick="removeItem(${item.id})">
+                    </td>
+                `;
+
+                cartItems.appendChild(row);
+            });
+
+            // Display the total price
+            const cartTotal = document.getElementById('cart-total');
+            cartTotal.textContent = `$${total.toFixed(2)}`;
+        }
+
+        // Increase the quantity of a product
+        function increaseQuantity(productId) {
+            let cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+            const productIndex = cartData.findIndex(item => item.id === productId);
+
+            if (productIndex !== -1) {
+                cartData[productIndex].quantity++;
+                localStorage.setItem('cartData', JSON.stringify(cartData));
+                displayCart();
+            }
+        }
+
+        // Decrease the quantity of a product
+        function decreaseQuantity(productId) {
+            let cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+            const productIndex = cartData.findIndex(item => item.id === productId);
+
+            if (productIndex !== -1 && cartData[productIndex].quantity > 1) {
+                cartData[productIndex].quantity--;
+                localStorage.setItem('cartData', JSON.stringify(cartData));
+                displayCart();
+            }
+        }
+
+        // Remove an item from the cart
+        function removeItem(productId) {
+            let cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+            const updatedCartData = cartData.filter(item => item.id !== productId);
+
+            localStorage.setItem('cartData', JSON.stringify(updatedCartData));
+            displayCart();
+        }
+
+        // Clear the entire cart
+        function clearCart() {
+            localStorage.removeItem('cartData');
+            displayCart();
+        }
+
+        // Display the cart contents when the page loads
+        displayCart();
+    </script>
+    <script src="stars.js"></script>
+</body>
+
+</html>

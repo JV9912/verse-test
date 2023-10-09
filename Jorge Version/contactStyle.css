@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #100a1c;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px 20px;
+    color: #fff;
+    max-width: 100%;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+
+.header .logo {
+    width: 100px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.header-text {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 10px;
+    max-width: 500px;
+}
+
+.header-text nav {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #222;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 6px 12px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: cyan;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #100a1c;
+    text-align: center;
+}
+
+.container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-color: teal;
+}
+
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #100a1c;
+    color: white;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Bruno Ace SC', cursive;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px #100a1c;
+}
+
+
+.contact-form button:hover {
+    background-color: teal;
+}
+
+.teal-heading {
+    color: #100a1c;
+}

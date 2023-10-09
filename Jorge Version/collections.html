@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Verse | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/saturn-blue-marble.png" width="125px">
+            </div>
+            <nav>
+                <button><a href="gallery.html"><img src="images/return.png" width="100px"></a></button>
+            </nav>
+        </div>
+    </div>
+    <div class="col elevated" id="gallery-col">
+        <div class="sub-col button-container-2 obey-nav">
+            <button class="rounded-corners appear owl" onmouseover="showProductCard(1)"><img src="images/mystery.png"
+                    style="max-width: 10vh;"></button>
+            <!-- Product Card for the first button -->
+            <div class="product-card owl" id="product-card-1">
+                <div class="product-card-content">
+                    <h2 class="product-title">Product 1 Name</h2>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="bottom">
+                        <p class="product-price">$29.99</p>
+                        <button class="add-to-cart-button" width="10px"
+                            onclick="addToCart(1, 'Product 1 Name', 29.99)"><a href=""><img src="images/cart.png"
+                                    width="20vh"></a></button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="rounded-corners appear owl" onmouseover="showProductCard(2)"><img src="images/mystery.png"
+                    style="max-width: 10vh;"></button>
+            <!-- Product Card for the second button -->
+            <div class="product-card owl" id="product-card-2">
+                <div class="product-card-content">
+                    <h2 class="product-title">Product 2 Name</h2>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="bottom">
+                        <p class="product-price">$39.99</p>
+                        <button class="add-to-cart-button" width="10px"
+                            onclick="addToCart(2, 'Product 2 Name', 39.99)"><a href="cart.html"><img
+                                    src="images/cart.png" width="20vh"></a></button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="rounded-corners appear owl" onmouseover="showProductCard(3)"><img src="images/mystery.png"
+                    style="max-width: 10vh;"></button>
+            <!-- Product Card for the third button -->
+            <div class="product-card owl" id="product-card-3">
+                <div class="product-card-content">
+                    <h2 class="product-title">Product 3 Name</h2>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="bottom">
+                        <p class="product-price">$49.99</p>
+                        <button class="add-to-cart-button" width="10px"
+                            onclick="addToCart(3, 'Product 3 Name', 49.99)"><a href=""><img src="images/cart.png"
+                                    width="20vh"></a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="stars.js"></script>
+    <script>
+        let currentProductCard = null;
+
+        function showProductCard(cardNumber) {
+            if (currentProductCard) {
+                currentProductCard.style.display = 'none';
+            }
+
+            const productCard = document.getElementById(`product-card-${cardNumber}`);
+            productCard.style.display = 'block';
+            currentProductCard = productCard;
+        }
+
+        function addToCart(productId, productName, productPrice) {
+            // Check if there's already cart data in localStorage
+            let cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+            // Check if the product with the same ID is already in the cart
+            const existingProduct = cartData.find(item => item.id === productId);
+
+            if (existingProduct) {
+                // If the product is already in the cart, update the quantity
+                existingProduct.quantity++;
+            } else {
+                // If the product is not in the cart, add it with quantity 1
+                cartData.push({ id: productId, name: productName, price: productPrice, quantity: 1 });
+            }
+
+            // Update the cart data in localStorage
+            localStorage.setItem('cartData', JSON.stringify(cartData));
+
+            alert(`Added ${productName} to the cart for $${productPrice}!`);
+        }
+
+    </script>
+</body>
+
+</html>

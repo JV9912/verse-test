@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactStyle.css">
+    <link rel="stylesheet" href="transitionStyle.css">
+    <script src="contactPage.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".fade-in").classList.add("active");
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <a href="homePage.html">
+                <img src="images/logo-white-teal.png" alt="Logo" class="logo fade-in">
+            </a>
+        </div>
+        <div class="header-text nav-right">
+            <nav>
+                <a href="#">Sign In</a>
+                <a href="#">Help</a>
+                <a href="#">Join</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="teal-heading">Contact Us</h2>
+        <form class="contact-form" onsubmit="return validateForm()">
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+            <textarea id="message" name="message" placeholder="What can we help you with?" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+
+</html>
