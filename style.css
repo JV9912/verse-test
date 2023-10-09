@@ -50,6 +50,7 @@ nav ul li {
 
 body {
     background-color: #000;
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
@@ -107,25 +108,19 @@ nav button a {
     color: #808080;
     animation: background-pan 10s linear infinite;
     background: linear-gradient(to right,
-          #000000,
-          #000010,
-          #000000,
-          #000020,
-          #000000);
+            #000000,
+            #010f23,
+            #02234d,
+            #000000);
     background-size: 200%;
+
+    white-space: nowrap;
+
+
+
+
+
 }
-
-
-
-.backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
-    z-index: 10;
-  }
 
 
 .sub-col img {
