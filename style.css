@@ -106,20 +106,15 @@ nav button a {
     min-width: 300px;
     justify-content: space-around;
     color: #808080;
-    animation: background-pan 10s linear infinite;
+    animation: background-pan 15s linear infinite;
     background: linear-gradient(to right,
             #000000,
             #010f23,
-            #02234d,
+            #040e1c,
             #000000);
     background-size: 200%;
 
     white-space: nowrap;
-
-
-
-
-
 }
 
 
