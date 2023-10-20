@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="500.000000pt" height="500.000000pt"
+    viewBox="0 0 500.000000 500.000000" preserveAspectRatio="xMidYMid meet">
+
+    <!-- Define a linear gradient from #FC354C to #0ABFBC -->
+    <defs>
+        <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FC354C" />
+            <stop offset="100%" style="stop-color:#0ABFBC" />
+        </linearGradient>
+    </defs>
+
+    <!-- Apply the gradient to the content with a black border (2px thick) -->
+    <g transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)" fill="url(#myGradient)" stroke="peachpuff" stroke-width="15">
+        <path d="M2442 3683 c-118 -608 -134 -697 -129 -749 9 -86 163 -507 188 -512
+        18 -3 167 436 175 518 8 73 -25 271 -157 958 -6 28 -14 52 -18 52 -4 0 -31
+        -120 -59 -267z" />
+        <path d="M3188 3189 c-36 -57 -155 -241 -263 -409 -108 -168 -245 -381 -304
+        -474 -59 -93 -111 -171 -117 -173 -10 -3 -125 164 -251 367 -124 200 -506 780
+        -511 776 -2 -3 53 -121 123 -263 150 -305 218 -456 274 -615 23 -64 55 -147
+        72 -185 17 -37 59 -140 94 -228 35 -88 84 -205 108 -261 25 -55 50 -118 56
+        -140 13 -45 30 -74 37 -59 29 67 106 256 145 355 27 69 72 181 99 250 28 69
+        63 163 79 210 42 124 185 431 387 834 25 48 44 95 42 104 -2 9 -32 -31 -70
+        -89z" />
+    </g>
+</svg>

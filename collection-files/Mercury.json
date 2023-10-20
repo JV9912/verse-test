@@ -1,0 +1,91 @@
+{
+    "collection_name": "Mercury Collection",
+    "color_scheme": {
+        "primary_color": "#0066CC",
+        "secondary_color": "#87CEEB",
+        "accent_color": "#C0C0C0",
+        "accent_color2": "#808080",
+        "gradient": "linear-gradient(to right, #0066CC, #C0C0C0)"
+    },
+    "logos": {
+        "caduceus": "",
+        "talaria": ""
+    },
+    "v-drop_logo": "pages/Jorge Version/images/verse-logo-vdrop_mercury.svg",
+    "products": [
+        {
+            "product_id": 1,
+            "name": "Mercury Hoodie",
+            "description": "A sleek and futuristic design inspired by Mercury's speed and agility.",
+            "price": 150.00,
+            "available_sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "isPrintful": false,
+            "image_url": ""
+        },
+        {
+            "product_id": 2,
+            "name": "Mercury Hoodie",
+            "description": "A hoodie designed for those who embrace speed and style.",
+            "type": "hoodie",
+            "price": 60.00,
+            "available_sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "isPrintful": true,
+            "image_url": ""
+        },
+        {
+            "product_id": 3,
+            "name": "Mercury Shirt",
+            "description": "A shirt that embodies Mercury's swift essence.",
+            "type": "shirt",
+            "price": 30.00,
+            "available_sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "isPrintful": true,
+            "image_url": "URL to Mercury QuickSilver Shirt image"
+        },
+        {
+            "product_id": 4,
+            "name": "Mercury Polo",
+            "description": "A polo shirt for those who appreciate both speed and sophistication.",
+            "type": "polo",
+            "price": 35.00,
+            "available_sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "isPrintful": true,
+            "image_url": "URL to Mercury RapidPulse Polo image"
+        },
+        {
+            "product_id": 5,
+            "name": "Mercury Pants",
+            "description": "Pants that blend comfort with Mercury's dynamic personality.",
+            "type": "pants",
+            "price": 40.00,
+            "available_sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "isPrintful": true,
+            "image_url": "URL to Mercury Velocity Pants image"
+        }
+    ]
+}

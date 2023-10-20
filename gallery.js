@@ -11,31 +11,24 @@ function handleRemoval(mutationsList, observer) {
         if (mutation.type === 'childList' && mutation.removedNodes.length > 0) {
             const removedNodes = Array.from(mutation.removedNodes);
             if (removedNodes.some(node => node.id === 'gallery-sub-col')) {
-                let parent = document.getElementById("button-container");
-                let buttons = parent.querySelectorAll("button");
+                const displayer = document.querySelector(".carousel2-container");
 
-                buttons.forEach(function (button, index) {
-                    setTimeout(() => {
-                        button.classList.add("appear");
-                        button.addEventListener('animationend', () => {
-                            button.classList.remove("appear");
-                            button.style.display = "inline-block";
-                        }, { once: true });
-                    }, index * 1); // Apply 'appear' animation with staggered delay
+                // Use setTimeout to add and remove 'appear' class
+                setTimeout(() => {
+                    displayer.classList.remove("hidden");
+                    displayer.classList.add("appear");
+                }, 10); // Adjust the delay (in milliseconds) as needed
 
-                    setTimeout(() => {
-                        button.classList.add("splash");
-                        button.addEventListener('animationend', () => {
-                            button.classList.remove("splash");
-                        }, { once: true });
-                    }, 500 + index * 100); // Apply 'splash' animation after 500ms delay
-                });
+                // After the animation ends, remove the 'appear' class
+                displayer.addEventListener('animationend', () => {
+                    displayer.classList.remove("appear");
+                }, { once: true });
             }
-
-
         }
     }
 }
+
+
 
 // Rest of your code remains the same
 const targetNode = document.getElementById('gallery-col');
@@ -63,7 +56,7 @@ setTimeout(function () {
             divToDelete.remove();
         }
     }
-}, 3000);
+}, 5000);
 
 
 

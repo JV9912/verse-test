@@ -1,74 +1,144 @@
 <!DOCTYPE html>
-<hmtl lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title> Verse | Gallery </title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Verse | Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+</head>
 
-    <body>
-        <div class="header">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="images/logo-white-teal.png" width="125px">
+<body class="" id="galleryBody">
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/verse-logo-vdrop_red_blue_border_peachpuff.svg" width="150px" alt="Verse Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><button><a href="index.html">Home</a></button></li>
+                    <li><button><a href="gallery.html">Gallery</a></button></li>
+                    <li><button><a href="contactPage.html">Contact</a></button></li>
+                    <li><button><a href="">About</a></button></li>
+                    <li><button><a href="https://www.instagram.com/verseoutfitters/"><img src="images/ig_logo.png"
+                                    width="23px" alt="Instagram"></a></button></li>
+                    <li><button><a href=""><img src="images/x_logo.png" width="23px" alt="X Logo"></a></button></li>
+                    <li><button><a href=""><img src="images/tt_logo.png" width="23px" alt="Twitter Logo"></a></button>
+                    </li>
+                    <li><button><a href="">Connect</a></button></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="col elevated" id="gallery-col">
+        <div class="sub-col" id="gallery-sub-col">
+            <div id="gallery-title">GALLERY</div>
+        </div>
+        <div class="carousel2-container obey-nav hidden">
+            <button id="prevButton2" class="carousel2__control-button"><img src="images/prev-arrow-icon-white.png"
+                    style="max-width: 50px;" alt="Previous"></button>
+            <div class="carousel2">
+                <div class="carousel2__item"><img src="images/verse-logo-vdrop_mercury.svg" style="max-height:100%"
+                        alt="Carousel Item 1"></div>
+                <div class="carousel2__item"><img src="images/verse-logo-vdrop_red_blue_border_peachpuff.svg"
+                        style="max-height:100%" alt="Carousel Item 2"></div>
+                <div class="carousel2__item"><img src="images/verse-logo-vdrop copy 2.svg" style="max-height:100%"
+                        alt="Carousel Item 3"></div>
+            </div>
+            <button id="nextButton2" class="carousel2__control-button"><img src="images/next-arrow-icon-white.png"
+                    style="max-width: 50px;" alt="Next"></button>
+        </div>
+    </div>
+    <div class="carousel-container space4" id="infiniteScroll--left">
+        <article>
+            <button class="rounded-corners-gradient-bg red-blue wrapper aura"><a href="collections.html"><img
+                        src="images/verse-logo-vdrop_red_blue_border_peachpuff.svg" style="width: 18vw"
+                        alt="Collection 1"></a></button>
+        </article>
+        <article>
+            <button class="rounded-corners-gradient-bg red-blue wrapper aura"><a href="collections.html"><img
+                        src="images/verse-logo-vdrop_red_blue_border_peachpuff.svg" style="width: 18vw"
+                        alt="Collection 1"></a></button>
+        </article>
+        <article>
+            <button class="rounded-corners-gradient-bg red-blue wrapper aura"><a href="collections.html"><img
+                        src="images/verse-logo-vdrop_red_blue_border_peachpuff.svg" style="width: 18vw"
+                        alt="Collection 1"></a></button>
+        </article>
+        <article>
+            <button class="rounded-corners-gradient-bg red-blue wrapper aura"><a href="collections.html"><img
+                        src="images/verse-logo-vdrop_red_blue_border_peachpuff.svg" style="width: 18vw"
+                        alt="Collection 1"></a></button>
+        </article>
+        <article>
+            <button class="rounded-corners-gradient-bg red-blue wrapper aura"><a href="collections.html"><img
+                        src="images/verse-logo-vdrop_red_blue_border_peachpuff.svg" style="width: 18vw"
+                        alt="Collection 1"></a></button>
+        </article>
+        <article>
+            <button class="rounded-corners-gradient-bg red-blue wrapper aura"><a href="collections.html"><img
+                        src="images/verse-logo-vdrop_red_blue_border_peachpuff.svg" style="width: 18vw"
+                        alt="Collection 1"></a></button>
+        </article>
+    </div>
+    <div class="product-list space5">
+        <div class="product-list-titlebar">
+            <div class="product-list-title">GARMENT LIST</div>
+            <div class="cart-icon">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1" />
+                </svg>
+                <span id="cartCounter">0</span>
+            </div>
+        </div>
+        <div class="list">
+            <div class="product aura">
+                <img src="images/verse-logo-vdrop_mercury.svg" class="placeholder" alt="Product Image">
+                <h2>PRODUCT NAME</h2>
+                <div class="price">$150</div>
+                <button class="addCart btn draw-border">Add To Cart</button>
+            </div>
+        </div>
+        <div class="cartTab">
+            <div class="cartTitle">Shopping Cart</div>
+            <div class="cartList">
+                <div class="cartItem">
+                    <div class="image">
+                        <img src="images/verse-logo-vdrop_mercury.svg" class="placeholder" alt="Cart Image">
+                    </div>
+                    <div class="name">
+                        NAME
+                    </div>
+                    <div class="totalPrice">
+                        $200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">
+                            < </span>
+                                <span>1</span>
+                                <span class="plus">></span>
+                    </div>
+
                 </div>
-                <nav>
-                    <ul>
-                        <li><button><a href="index.html">Home</a></button></li>
-                        <li><button><a href="gallery.html">Gallery</a></button></li>
-                        <li><button><a href="contactPage.html">Contact</a></button></li>
-                        <li><button><a href="">About</a></button></li>
-                        <li><button><a href="https://www.instagram.com/verseoutfitters/"><img src="images/ig_logo.png"
-                                        width="20px"></a></button></li>
-                        <li><button><a href=""><img src="images/x_logo.png" width="20px"></a></button></li>
-                        <li><button><a href=""><img src="images/tt_logo.png" width="20px"></a></button></li>
-                        <li><button><a href="">Connect</a></button></li>
-                    </ul>
-                </nav>
+            </div>
+            <div class="buttonBar">
+                <button class="btn draw-border" id="close">CLOSE</button>
+                <a class="btn draw-border" id="checkOut" href="checkOut.html" style="text-decoration: none;">CHECK
+                    OUT</a>
+                </button>
             </div>
         </div>
-        <div class="col elevated" id="gallery-col">
-            <div class="sub-col" id="gallery-sub-col">
-                <div id="gallery-title">GALLERY</div>
-            </div>
-            <div class="sub-col button-container obey-nav" id="button-container">
-                <button class="rounded-corners-gradient-bg owl"><a href="collections.html"><img src="images/owl.png"
-                            style="width: 6.5vw;"></a></button>
-                <button class="rounded-corners-gradient-bg mystery"><a href=""><img src="images/mystery.png"
-                            style="max-width: 10vh;"></a></button>
-                <button class="rounded-corners-gradient-bg mystery"><a href=""><img src="images/mystery.png"
-                            style="max-width: 10vh;"></a></button>
-                <button class="rounded-corners-gradient-bg mystery"><a href=""><img src="images/mystery.png"
-                            style="max-width: 10vh;"></a></button>
-                <button class="rounded-corners-gradient-bg mystery"><a href=""><img src="images/mystery.png"
-                            style="max-width: 10vh;"></a></button>
-                <button class="rounded-corners-gradient-bg mystery"><a href=""><img src="images/mystery.png"
-                            style="max-width: 10vh;"></a></button>
-                <button class="rounded-corners-gradient-bg mystery"><a href=""><img src="images/mystery.png"
-                            style="max-width: 10vh;"></a></button>
-                <button class="rounded-corners-gradient-bg mystery"><a href=""><img src="images/mystery.png"
-                            style="max-width: 10vh;"></a></button>
+        <script>
 
-            </div>
-        </div>
-
-
-
-
-
+        </script>
         <script src="gallery.js"></script>
         <script src="stars.js"></script>
+        <script src="carousel.js"></script>
+        <script src="carousel2.js"></script>
+        <script src="list.js"></script>
+</body>
 
-
-
-
-
-
-
-    </body>
-
-</hmtl>
+</html>

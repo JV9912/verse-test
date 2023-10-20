@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     createStars();
 
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         let existingStars = document.querySelectorAll('.star');
-        existingStars.forEach(star => star.remove()); 
+        existingStars.forEach(star => star.remove());
 
-        createStars(); 
+        createStars();
     });
 
     setInterval(createShootingStar, 10000);
-    setInterval(randomizeNebulaSpeed, 15000);
 });
 
 function createStars() {
     for (let i = 0; i < 500; i++) {
         let star = document.createElement("div");
         star.className = "star";
-        star.style.top = `${Math.random() * window.innerHeight}px`;
+        star.style.top = `${Math.random() * document.body.scrollHeight
+            }px`;
         star.style.left = `${Math.random() * window.innerWidth}px`;
         let size = Math.random() * 2.5;
         star.style.width = `${size}px`;
@@ -42,4 +42,3 @@ function createShootingStar() {
         shootingStar.remove();
     }, 1500);
 }
-

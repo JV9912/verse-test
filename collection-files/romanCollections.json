@@ -1,0 +1,64 @@
+{
+    "gods": [
+        {
+            "name": "Jupiter",
+            "description": "The king of the gods, associated with thunder and the sky.",
+            "file": "Jupiter.json"
+        },
+        {
+            "name": "Neptune",
+            "description": "God of the sea and waters, often depicted with a trident.",
+            "file": "Neptune.json"
+        },
+        {
+            "name": "Mars",
+            "description": "God of war and a symbol of strength and courage.",
+            "file": "Mars.json"
+        },
+        {
+            "name": "Apollo",
+            "description": "God of music, arts, and the sun, a symbol of creativity.",
+            "file": "Apollo.json"
+        },
+        {
+            "name": "Venus",
+            "description": "Goddess of love and beauty, an embodiment of elegance.",
+            "file": "Venus.json"
+        },
+        {
+            "name": "Mercury",
+            "description": "Messenger god, associated with commerce and speed.",
+            "file": "Mercury.json"
+        },
+        {
+            "name": "Diana",
+            "description": "Goddess of the hunt, symbolizing independence and strength.",
+            "file": "Diana.json"
+        },
+        {
+            "name": "Vulcan",
+            "description": "God of fire and craftsmanship, a symbol of creativity.",
+            "file": "Vulcan.json"
+        },
+        {
+            "name": "Ceres",
+            "description": "Goddess of agriculture and fertility, a representation of growth.",
+            "file": "Ceres.json"
+        },
+        {
+            "name": "Minerva",
+            "description": "Goddess of wisdom, strategy, and warfare, an emblem of intelligence.",
+            "file": "Minerva.json"
+        },
+        {
+            "name": "Bacchus",
+            "description": "God of wine and festivities, a symbol of joy and celebration.",
+            "file": "Bacchus.json"
+        },
+        {
+            "name": "Pluto",
+            "description": "God of the underworld and wealth, embodying mystery and transformation.",
+            "file": "Pluto.json"
+        }
+    ]
+}
